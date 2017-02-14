@@ -6,3 +6,7 @@ background-repeat:no-repeat;
 background-size:cover;
 background-position:center;
 }
+
+.button.button-block.button-positive {
+    background-color: #37474F ;
+}
