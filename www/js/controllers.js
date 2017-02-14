@@ -1,4 +1,4 @@
-var data  = [
+var DATA  = [
 {
 "num_hzm" : "456427",
 "num_tm" : "121212",
@@ -118,5 +118,31 @@ angular.module('starter.controllers', [])
     endTime:new Date(2017, 1, 15,10)//,
     //allDay:false
   }]
+})
+
+
+.controller('CurrentHzmCtrl', function($scope, $stateParams) {
+  
+
+    $scope.add = add;
+    $scope.data = [
+        {
+            name: "AiA",
+            code: "AI101",
+            limit: 25000,
+            account: "Life Insurance"
+        },
+        {
+            name: "Cargills",
+            code: "CF001",
+            limit: 30000,
+            account: "Food City"
+        }
+    ]
+
+    ////////
+    function add(index) {
+        window.alert("Added: " + index);
+    }
 })
 ;
