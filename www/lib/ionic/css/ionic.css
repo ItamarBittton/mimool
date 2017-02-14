@@ -3440,7 +3440,8 @@ body.grade-c {
     opacity: 0; }
 
 .platform-android .scroll-bar-indicator {
-  border-radius: 0; }
+  border-radius: 0;
+   }
 
 .grade-b .scroll-bar-indicator,
 .grade-c .scroll-bar-indicator {

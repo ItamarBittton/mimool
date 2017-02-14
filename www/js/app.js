@@ -94,8 +94,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ui.rCalendar'])
         }
       }
     })
+<<<<<<< HEAD
 
     .state('app.log_in', {
+=======
+.state('app.log_in', {
+>>>>>>> 2c2bbc2bc1a4a6a7105296ad9122aeb33693b3a0
       url: '/Login',
       views: {
         'menuContent': {
