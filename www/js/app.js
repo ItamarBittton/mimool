@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'ui.rCalendar'])
+angular.module('starter', ['ionic', 'starter.controllers', 'ui.rCalendar', 'ionic-ratings'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -37,6 +37,14 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ui.rCalendar'])
     views: {
       'menuContent': {
         templateUrl: 'templates/plan.html'
+      }
+    }
+  })
+  .state('app.rate', {
+    url: '/rate',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/rate.html'
       }
     }
   })
