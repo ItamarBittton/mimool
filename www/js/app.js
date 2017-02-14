@@ -94,18 +94,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ui.rCalendar'])
         }
       }
     })
-
-    .state('app.log_in', {
-      url: '/Login',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/login.html',
-          controller: 'PlaylistsCtrl'
-        }
-      }
-    })
-
-        .state('app.log_in', {
+.state('app.log_in', {
       url: '/Login',
       views: {
         'menuContent': {
