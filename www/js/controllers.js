@@ -111,6 +111,8 @@ angular.module('starter.controllers', [])
     { title: 'Rap', id: 5 },
     { title: 'Cowbell', id: 6 }
   ];
+ $scope.datepaln = new Date("02-17-2017");
+
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
@@ -175,7 +177,7 @@ angular.module('starter.controllers', [])
         }
     ]
 
-    ////////
+
     function add(index) {
         window.alert("Added: " + index);
     }

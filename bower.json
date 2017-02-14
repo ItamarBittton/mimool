@@ -18,5 +18,8 @@
     "www/lib",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "ionic-datepicker": "^1.2.1"
+  }
 }

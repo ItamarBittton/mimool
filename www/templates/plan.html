@@ -1,9 +1,24 @@
-<ion-view view-title="סידור עבודה">
+<ion-view view-title="סידור עבודה" dir="rtl">
   <ion-content>
+   
     <ion-list>
-      <ion-item ng-repeat="order in orders" href="#/app/orders/{{order.id}}">
+<label class="item item-input">
+  <span class="input-label" value="2017-02-17" >תאריך</span>
+  <input type="date">
+</label>
+
+<br>
+        <div class="row header">
+          <div class="col">אסמכתא</div>
+          <div class="col">שעת התייצבות</div>
+          <div class="col">ספק</div>
+        </div>
+        <div class="row" ng-repeat="data in ctrl.data">
+
+        </div>
+      <!--<ion-item ng-repeat="order in orders" href="#/app/orders/{{order.id}}">
         {{order.title}}
-      </ion-item>
+      </ion-item>-->
     </ion-list>
   </ion-content>
 </ion-view>

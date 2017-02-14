@@ -32,14 +32,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ui.rCalendar'])
     controller: 'AppCtrl'
   })
 
-  .state('app.plan', {
-    url: '/plan',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/plan.html'
-      }
-    }
-  })
   .state('app.search', {
     url: '/search',
     views: {
@@ -53,6 +45,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ui.rCalendar'])
     views: {
       'menuContent': {
         templateUrl: 'templates/order.html',
+        controller: 'OrderCtrl'
+      }
+    }
+  })
+      .state('app.plan', {
+    url: '/plan',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/plan.html',
         controller: 'OrderCtrl'
       }
     }
@@ -94,12 +95,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ui.rCalendar'])
         }
       }
     })
-<<<<<<< HEAD
 
     .state('app.log_in', {
-=======
-.state('app.log_in', {
->>>>>>> 2c2bbc2bc1a4a6a7105296ad9122aeb33693b3a0
+
+
+
       url: '/Login',
       views: {
         'menuContent': {
