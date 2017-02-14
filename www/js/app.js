@@ -106,8 +106,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ui.rCalendar'])
     })
 =======
 
-        .state('app.login', {
-      url: '/login',
+        .state('app.log_in', {
+      url: '/Login',
       views: {
         'menuContent': {
           templateUrl: 'templates/login.html',
