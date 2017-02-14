@@ -52,5 +52,16 @@ angular.module('starter.controllers', [])
   ];
 })
 
+.controller('OrderCtrl', function($scope) {
+  $scope.order = [
+    { title: 'asd', id: 1 },
+    { title: 'fds', id: 2 },
+    { title: 'asd', id: 3 },
+    { title: 'Indie', id: 4 },
+    { title: 'Rap', id: 5 },
+    { title: 'Cowbell', id: 6 }
+  ];
+})
+
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 });

@@ -1,5 +1,11 @@
-<ion-view view-title="Order">
+<ion-view view-title="סתם הזמנה">
   <ion-content>
-    <h1>חפש לפי מספר הזמנה</h1>
+    <h1>הזמנה מספר 123456</h1>
+    
+    <ion-list>
+      <ion-item ng-repeat="item in order">
+        {{item.title}}
+      </ion-item>
+    </ion-list>
   </ion-content>
 </ion-view>

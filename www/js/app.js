@@ -40,11 +40,20 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   })
-  .state('app.order', {
+  .state('app.search', {
+    url: '/search',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/search.html'
+      }
+    }
+  })
+    .state('app.order', {
     url: '/order',
     views: {
       'menuContent': {
-        templateUrl: 'templates/order.html'
+        templateUrl: 'templates/order.html',
+        controller: 'OrderCtrl'
       }
     }
   })
