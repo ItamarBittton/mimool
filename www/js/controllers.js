@@ -118,8 +118,30 @@ angular.module('starter.controllers', [])
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 })
 
-.controller('CalendarCtrl', function($scope, $stateParams) {
-  $scope.eventSource = [{
+.controller('CalendarCtrl', function($scope/*, $stateParams*/) {
+  $scope.calendar = {};
+  
+  $scope.changeMode = function (mode) {
+    $scope.calendar.mode = mode;
+  };
+
+  $scope.today = function () {
+    $scope.calendar.currentDate = new Date();
+  };
+
+  $scope.onViewTitleChanged = function (title) {
+    $scope.viewTitle = title;
+  };
+
+  $scope.onEventSelected = function (event) {
+    console.log('Event selected:' + event.startTime + '-' + event.endTime + ',' + event.title);
+  };
+
+  $scope.onTimeSelected = function (selectedTime, events, disabled) {
+    console.log('Selected time: ' + selectedTime + ', hasEvents: ' + (events !== undefined && events.length !== 0) + ', disabled: ' + disabled);
+  };
+
+  $scope.calendar.eventSource = [{
     title:data[0].matrat_hvl,
     startTime:data[0].timestamp_hit,
     endTime:data[0].timestamp_shi//,
@@ -145,9 +167,9 @@ angular.module('starter.controllers', [])
 
     $scope.add = add;
     $scope.hzm = 
-                  {
-                  "אסמכתא" : "456427",
-                  "תמ\"ש" : "121212",
+                  /*data[0];*/{
+                  "אסמכתא" : data[0].num_hzm,
+                  "תמ\"ש" : data[0].num_tm,
                   "סטטוס": "4 מאושר",
                   "מטרת הובלה" : "חרדים מקווה",
                   "קוד רכב" : "1600",
@@ -157,7 +179,7 @@ angular.module('starter.controllers', [])
                   "זמן התייצבות" :"05:00",
                   "תאריך שחרור" : "17-02-2017",
                   "זמן שחרור": "10:30",
-                  "מועדות": ["מרחב מרכז", "חולון"],
+                  "מועדות": "מרחב מרכז ,חולון",
                   "מחיר" :"23,244"
                 }
                 ;
