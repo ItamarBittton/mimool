@@ -44,7 +44,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ui.rCalendar', 'ioni
     url: '/rate',
     views: {
       'menuContent': {
-        templateUrl: 'templates/rate.html'
+        templateUrl: 'templates/rate.html',
+        controller: 'RateCtrl'
       }
     }
   })

@@ -18,5 +18,8 @@
     "www/lib",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "ionic-ratings": "^0.3.0"
+  }
 }
