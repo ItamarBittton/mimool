@@ -1,4 +1,4 @@
-var data  = [
+var DATA  = [
 {
 "num_hzm" : "456427",
 "num_tm" : "121212",
@@ -97,6 +97,17 @@ angular.module('starter.controllers', [])
   ];
 })
 
+.controller('OrderCtrl', function($scope) {
+  $scope.order = [
+    { title: 'asd', id: 1 },
+    { title: 'fds', id: 2 },
+    { title: 'asd', id: 3 },
+    { title: 'Indie', id: 4 },
+    { title: 'Rap', id: 5 },
+    { title: 'Cowbell', id: 6 }
+  ];
+})
+
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 })
 
@@ -107,5 +118,31 @@ angular.module('starter.controllers', [])
     endTime:new Date(2017, 1, 17,10)//,
     //allDay:false
   }]
+})
+
+
+.controller('CurrentHzmCtrl', function($scope, $stateParams) {
+  
+
+    $scope.add = add;
+    $scope.data = [
+        {
+            name: "AiA",
+            code: "AI101",
+            limit: 25000,
+            account: "Life Insurance"
+        },
+        {
+            name: "Cargills",
+            code: "CF001",
+            limit: 30000,
+            account: "Food City"
+        }
+    ]
+
+    ////////
+    function add(index) {
+        window.alert("Added: " + index);
+    }
 })
 ;

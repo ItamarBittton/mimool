@@ -40,11 +40,20 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ui.rCalendar'])
       }
     }
   })
-  .state('app.order', {
+  .state('app.search', {
+    url: '/search',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/search.html'
+      }
+    }
+  })
+    .state('app.order', {
     url: '/order',
     views: {
       'menuContent': {
-        templateUrl: 'templates/order.html'
+        templateUrl: 'templates/order.html',
+        controller: 'OrderCtrl'
       }
     }
   })
@@ -54,6 +63,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ui.rCalendar'])
       'menuContent': {
         templateUrl: 'templates/calendar.html',
         controller: 'CalendarCtrl'
+      }
+    }
+  })
+
+  .state('app.currentHzm', {
+    url: '/currentHzm',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/currentHzm.html',
+        controller: 'CurrentHzmCtrl'
       }
     }
   })
@@ -76,6 +95,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ui.rCalendar'])
       }
     })
 
+        .state('app.login', {
+      url: '/login',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/login.html',
+          controller: 'AppCtrl'
+        }
+      }
+    })
+
   .state('app.single', {
     url: '/playlists/:playlistId',
     views: {
@@ -86,5 +115,5 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ui.rCalendar'])
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/Login');
 });
