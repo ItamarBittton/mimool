@@ -52,7 +52,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ui.rCalendar'])
     url: '/calendar',
     views: {
       'menuContent': {
-        templateUrl: 'templates/calendar.html'
+        templateUrl: 'templates/calendar.html',
+        controller: 'CalendarCtrl'
       }
     }
   })
@@ -74,15 +75,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ui.rCalendar'])
         }
       }
     })
-    .state('app.login', {
-      url: '/Login',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/login.html',
-          controller: 'PlaylistsCtrl'
-        }
-      }
-    })
 
   .state('app.single', {
     url: '/playlists/:playlistId',
@@ -94,5 +86,5 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ui.rCalendar'])
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/Login');
+  $urlRouterProvider.otherwise('/app/playlists');
 });
