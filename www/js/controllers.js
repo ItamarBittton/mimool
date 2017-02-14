@@ -1,4 +1,4 @@
-var DATA  = [
+var data  = [
 {
 "num_hzm" : "456427",
 "num_tm" : "121212",
