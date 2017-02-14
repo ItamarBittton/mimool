@@ -1,4 +1,4 @@
-var data  = [
+var DATA  = [
 {
 "num_hzm" : "456427",
 "num_tm" : "121212",
@@ -7,8 +7,8 @@ var data  = [
 "kod_rechev" : "1600",
 "rechev_name" : "�������",
 "kamot_rechev" : "1",
-"date_hit" : "17-02-2017",
-"date_shi" : "17-02-2017",
+"date_hit" : "02-17-2017", //MM-DD-YYYY
+"date_shi" : "02-17-2017", //MM-DD-YYYY
 "time_hit" :"05:00",
 "time_shi": "10:30",
 "mouda": ["���� ����", "�����"],
@@ -21,8 +21,8 @@ var data  = [
 "kod_rechev" : "3000",
 "rechev_name" : "�������",
 "kamot_rechev" : "3",
-"date_hit" : "17-02-2017",
-"date_shi" : "17-02-2017",
+"date_hit" : "02-17-2017",
+"date_shi" : "02-17-2017",
 "time_hit" :"05:00",
 "time_shi": "23:00",
 "mouda": ["��� �����"],
@@ -97,15 +97,52 @@ angular.module('starter.controllers', [])
   ];
 })
 
+.controller('OrderCtrl', function($scope) {
+  $scope.order = [
+    { title: 'asd', id: 1 },
+    { title: 'fds', id: 2 },
+    { title: 'asd', id: 3 },
+    { title: 'Indie', id: 4 },
+    { title: 'Rap', id: 5 },
+    { title: 'Cowbell', id: 6 }
+  ];
+})
+
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 })
 
 .controller('CalendarCtrl', function($scope, $stateParams) {
   $scope.eventSource = [{
-    title:'טיול יחידה',
-    startTime:new Date(2017, 1, 15,8),
-    endTime:new Date(2017, 1, 15,10)//,
+    title:data[0].matrat_hvl,
+    startTime:new Date(data[0].date_hit),
+    endTime:new Date(2017, 1, 17,10)//,
     //allDay:false
   }]
+})
+
+
+.controller('CurrentHzmCtrl', function($scope, $stateParams) {
+  
+
+    $scope.add = add;
+    $scope.data = [
+        {
+            name: "AiA",
+            code: "AI101",
+            limit: 25000,
+            account: "Life Insurance"
+        },
+        {
+            name: "Cargills",
+            code: "CF001",
+            limit: 30000,
+            account: "Food City"
+        }
+    ]
+
+    ////////
+    function add(index) {
+        window.alert("Added: " + index);
+    }
 })
 ;

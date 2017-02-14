@@ -40,11 +40,20 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ui.rCalendar'])
       }
     }
   })
-  .state('app.order', {
+  .state('app.search', {
+    url: '/search',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/search.html'
+      }
+    }
+  })
+    .state('app.order', {
     url: '/order',
     views: {
       'menuContent': {
-        templateUrl: 'templates/order.html'
+        templateUrl: 'templates/order.html',
+        controller: 'OrderCtrl'
       }
     }
   })
@@ -54,6 +63,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ui.rCalendar'])
       'menuContent': {
         templateUrl: 'templates/calendar.html',
         controller: 'CalendarCtrl'
+      }
+    }
+  })
+
+  .state('app.currentHzm', {
+    url: '/currentHzm',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/currentHzm.html',
+        controller: 'CurrentHzmCtrl'
       }
     }
   })
@@ -75,6 +94,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ui.rCalendar'])
         }
       }
     })
+<<<<<<< HEAD
     .state('app.log_in', {
       url: '/Login',
       views: {
@@ -84,6 +104,19 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ui.rCalendar'])
         }
       }
     })
+=======
+
+        .state('app.login', {
+      url: '/login',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/login.html',
+          controller: 'AppCtrl'
+        }
+      }
+    })
+
+>>>>>>> 145fb285da98080130eaf18b07d22eb05d59d314
   .state('app.single', {
     url: '/playlists/:playlistId',
     views: {

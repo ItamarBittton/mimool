@@ -1,0 +1,21 @@
+<ion-view view-title="currentHzm">
+  <ion-header-bar class="bar-stable">
+        <h1 class="title">Service Provider Details</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div class="row header">
+          <div class="col">Utility Company Name</div>
+          <div class="col">Service Code</div>
+          <div class="col">Pay Limit</div>
+          <div class="col">Account Number to Use</div>
+          <div class="col"></div>
+        </div>
+        <div class="row" ng-repeat="dat in data">
+          <div class="col">{{dat.name}}</div>
+          <div class="col">{{dat.code}}</div>
+          <div class="col">LK {{dat.limit}}</div>
+          <div class="col">{{dat.account}}</div>
+          <div class="col"><button class="button" ng-click="add($index)">Add</button></div>
+        </div>
+    </ion-content>
+</ion-view>
