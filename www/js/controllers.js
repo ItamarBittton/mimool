@@ -2,37 +2,37 @@ var data  = [
 {
 "num_hzm" : "456427",
 "num_tm" : "121212",
-"status": "4 ������",
-"matrat_hvl" : "����� �����",
+"status": "4 מאושרת",
+"matrat_hvl" : "טיול יחידתי",
 "kod_rechev" : "1600",
 "rechev_name" : "�������",
 "kamot_rechev" : "1",
-"timestamp_hit" : new Date(2017,02,17,05,00),
-"timestamp_shi" : new Date(2017,02,17,10,30),
+"timestamp_hit" : new Date(2017,01,17,05,00),
+"timestamp_shi" : new Date(2017,01,17,10,30),
 "mouda": ["���� ����", "�����"],
 "mechir" :"23,244"
 },
 {"num_hzm" : "456789",
 "num_tm" : "151515",
-"status": "4 ������",
-"matrat_hvl" : "���� �����",
+"status": "4 מאושרת",
+"matrat_hvl" : "תרחט",
 "kod_rechev" : "3000",
 "rechev_name" : "�������",
 "kamot_rechev" : "3",
-"timestamp_hit" : new Date(2017,02,17,05,00),
-"timestamp_shi" : new Date(2017,02,17,23,00),
+"timestamp_hit" : new Date(2017,01,17,05,00),
+"timestamp_shi" : new Date(2017,01,17,23,00),
 "mouda": ["��� �����"],
 "mechir" :"100,000"
 },
 {"num_hzm" : "525852",
 "num_tm" : "123698",
-"status": "4 ������",
+"status": "4 מאושרת",
 "matrat_hvl" : "������ ������",
 "kod_rechev" : "3000",
 "rechev_name" : "�������",
 "kamot_rechev" : "1",
-"timestamp_hit" : new Date(2017,02,17,06,00),
-"timestamp_shi" : new Date(2017,02,17,23,00),
+"timestamp_hit" : new Date(2017,01,17,06,00),
+"timestamp_shi" : new Date(2017,01,17,23,00),
 "mouda": ["���� ����"],
 "mechir" :"60,000"}
 ];
@@ -110,6 +110,18 @@ angular.module('starter.controllers', [])
     title:data[0].matrat_hvl,
     startTime:data[0].timestamp_hit,
     endTime:data[0].timestamp_shi//,
+    //allDay:false
+  },
+  {
+    title:data[1].matrat_hvl,
+    startTime:data[1].timestamp_hit,
+    endTime:data[1].timestamp_shi//,
+    //allDay:false
+  },
+  {
+    title:data[2].matrat_hvl,
+    startTime:data[2].timestamp_hit,
+    endTime:data[2].timestamp_shi//,
     //allDay:false
   }]
 })
