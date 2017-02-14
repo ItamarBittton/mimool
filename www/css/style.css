@@ -1,10 +1,9 @@
 /* Empty. Add your own CSS if you like */
 .LogIn {
-
     background-image :  url("../img/nkr0qbaku4s-robson-hatsukami-morgan.jpg");
-background-repeat:no-repeat;
-background-size:cover;
-background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
 }
 
 .button.button-block.button-positive {
