@@ -1,4 +1,3 @@
-/* Empty. Add your own CSS if you like */
 .LogIn {
     background-image :  url("../img/nkr0qbaku4s-robson-hatsukami-morgan.jpg");
     background-repeat:no-repeat;
@@ -13,4 +12,5 @@
 .Logo {
     width: 40px;
     height: 40px;
+    float : left !important;
 }
