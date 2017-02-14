@@ -102,6 +102,14 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ui.rCalendar', 'ioni
         }
       }
     })
+    .state('app.score', {
+      url: '/score',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/score.html'
+        }
+      }
+    })
     .state('app.playlists', {
       url: '/playlists',
       views: {
