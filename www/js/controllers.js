@@ -105,8 +105,30 @@ angular.module('starter.controllers', [])
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 })
 
-.controller('CalendarCtrl', function($scope, $stateParams) {
-  $scope.eventSource = [{
+.controller('CalendarCtrl', function($scope/*, $stateParams*/) {
+  $scope.calendar = {};
+  
+  $scope.changeMode = function (mode) {
+    $scope.calendar.mode = mode;
+  };
+
+  $scope.today = function () {
+    $scope.calendar.currentDate = new Date();
+  };
+
+  $scope.onViewTitleChanged = function (title) {
+    $scope.viewTitle = title;
+  };
+
+  $scope.onEventSelected = function (event) {
+    console.log('Event selected:' + event.startTime + '-' + event.endTime + ',' + event.title);
+  };
+
+  $scope.onTimeSelected = function (selectedTime, events, disabled) {
+    console.log('Selected time: ' + selectedTime + ', hasEvents: ' + (events !== undefined && events.length !== 0) + ', disabled: ' + disabled);
+  };
+
+  $scope.calendar.eventSource = [{
     title:data[0].matrat_hvl,
     startTime:data[0].timestamp_hit,
     endTime:data[0].timestamp_shi//,
