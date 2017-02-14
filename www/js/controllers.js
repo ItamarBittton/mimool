@@ -7,10 +7,8 @@ var DATA  = [
 "kod_rechev" : "1600",
 "rechev_name" : "�������",
 "kamot_rechev" : "1",
-"date_hit" : "02-17-2017", //MM-DD-YYYY
-"date_shi" : "02-17-2017", //MM-DD-YYYY
-"time_hit" :"05:00",
-"time_shi": "10:30",
+"timestamp_hit" : new Date(2017,02,17,05,00),
+"timestamp_shi" : new Date(2017,02,17,10,30),
 "mouda": ["���� ����", "�����"],
 "mechir" :"23,244"
 },
@@ -21,10 +19,8 @@ var DATA  = [
 "kod_rechev" : "3000",
 "rechev_name" : "�������",
 "kamot_rechev" : "3",
-"date_hit" : "02-17-2017",
-"date_shi" : "02-17-2017",
-"time_hit" :"05:00",
-"time_shi": "23:00",
+"timestamp_hit" : new Date(2017,02,17,05,00),
+"timestamp_shi" : new Date(2017,02,17,23,00),
 "mouda": ["��� �����"],
 "mechir" :"100,000"
 },
@@ -35,10 +31,8 @@ var DATA  = [
 "kod_rechev" : "3000",
 "rechev_name" : "�������",
 "kamot_rechev" : "1",
-"date_hit" : "17-02-2017",
-"date_shi" : "17-02-2017",
-"time_hit" :"06:00",
-"time_shi": "23:00",
+"timestamp_hit" : new Date(2017,02,17,06,00),
+"timestamp_shi" : new Date(2017,02,17,23,00),
 "mouda": ["���� ����"],
 "mechir" :"60,000"}
 ];
@@ -114,8 +108,8 @@ angular.module('starter.controllers', [])
 .controller('CalendarCtrl', function($scope, $stateParams) {
   $scope.eventSource = [{
     title:data[0].matrat_hvl,
-    startTime:new Date(data[0].date_hit),
-    endTime:new Date(2017, 1, 17,10)//,
+    startTime:data[0].timestamp_hit,
+    endTime:data[0].timestamp_shi//,
     //allDay:false
   }]
 })
