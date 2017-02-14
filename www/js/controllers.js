@@ -47,6 +47,16 @@ angular.module('starter.controllers', [])
   // listen for the $ionicView.enter event:
   //$scope.$on('$ionicView.enter', function(e) {
   //});
+  $scope.safeApply = function(fn) {
+  var phase = this.$root.$$phase;
+  if(phase == '$apply' || phase == '$digest') {
+    if(fn && (typeof(fn) === 'function')) {
+      fn();
+    }
+  } else {
+    this.$apply(fn);
+  }
+};
 
   // Form data for the login modal
   $scope.loginData = {};
@@ -72,6 +82,7 @@ angular.module('starter.controllers', [])
   $scope.doLogin = function() {
     console.log('Doing login', $scope.loginData);
 
+    
     // Simulate a login delay. Remove this and replace with your login
     // code if using a login system
     $timeout(function() {
