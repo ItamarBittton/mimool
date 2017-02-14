@@ -57,6 +57,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ui.rCalendar'])
     }
   })
 
+  .state('app.currentHzm', {
+    url: '/currentHzm',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/currentHzm.html',
+        controller: 'currentHzmCtrl'
+      }
+    }
+  })
+
   .state('app.browse', {
       url: '/browse',
       views: {
