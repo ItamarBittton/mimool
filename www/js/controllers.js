@@ -56,5 +56,12 @@ angular.module('starter.controllers', [])
 })
 
 .controller('CalendarCtrl', function($scope, $stateParams) {
+  alert('itamar gay');
+  $scope.eventSource = [{
+    title:'טיול יחידה',
+    startTime:new Date(Date.UTC(2017, 1, 15)),
+    endTime:new Date(Date.UTC(2017, 1, 16)),
+    allDay:true
+  }]
 })
 ;
