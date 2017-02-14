@@ -63,7 +63,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ui.rCalendar'])
     views: {
       'menuContent': {
         templateUrl: 'templates/currentHzm.html',
-        controller: 'currentHzmCtrl'
+        controller: 'CurrentHzmCtrl'
       }
     }
   })
