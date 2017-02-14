@@ -18,3 +18,7 @@
 .scroll-content {
         overflow:hidden;
 }
+
+.ionic_ratings .icon {
+    font-size: 50px;
+  }

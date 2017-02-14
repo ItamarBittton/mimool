@@ -192,16 +192,34 @@ angular.module('starter.controllers', [])
     }
 })
 .controller('RateCtrl', function($scope, $stateParams) {
+  $scope.str = 'חפש';
+  $scope.show = false;
+  $scope.info = {};
+  $scope.info.tm = '';
+  $scope.info.hzm = '';
+  $scope.text = '';
+
   $scope.ratingsObject = {
         iconOn: 'ion-ios-star',    //Optional
         iconOff: 'ion-ios-star-outline',   //Optional
         iconOnColor: 'rgb(200, 200, 100)',  //Optional
         iconOffColor:  'rgb(200, 100, 100)',    //Optional
-        rating:  2, //Optional
-        minRating:1,    //Optional
+        rating:  0, //Optional
+        minRating:0,    //Optional
         readOnly: true, //Optional
         callback: function(rating, index) {    //Mandatory
           $scope.ratingsCallback(rating, index);
+        }
+      };
+
+      $scope.clicked = function(){
+        $scope.show = !$scope.show;
+        $scope.str = $scope.show ? 'שלח' : 'חפש';
+        
+        if($scope.show !== true){
+            $scope.info.tm = '';
+            $scope.info.hzm = '';
+            $scope.text = 'הדירוג נשלח בהצלחה!'
         }
       };
 
