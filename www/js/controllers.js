@@ -1,5 +1,6 @@
 var data  = [
 {
+"sapak" : "אגד",
 "num_hzm" : "456427",
 "num_tm" : "121212",
 "status": "4 מאושרת",
@@ -12,7 +13,8 @@ var data  = [
 "mouda": ["���� ����", "�����"],
 "mechir" :"23,244"
 },
-{"num_hzm" : "456789",
+{"sapak" : "אגד",
+  "num_hzm" : "456789",
 "num_tm" : "151515",
 "status": "4 מאושרת",
 "matrat_hvl" : "תרחט",
@@ -24,7 +26,8 @@ var data  = [
 "mouda": ["��� �����"],
 "mechir" :"100,000"
 },
-{"num_hzm" : "525852",
+{"sapak" : "אגד",
+  "num_hzm" : "525852",
 "num_tm" : "123698",
 "status": "4 מאושרת",
 "matrat_hvl" : "������ ������",
@@ -111,7 +114,18 @@ angular.module('starter.controllers', [])
     { title: 'Rap', id: 5 },
     { title: 'Cowbell', id: 6 }
   ];
- $scope.datepaln = new Date("02-17-2017");
+$scope.datepaln = new Date(2017,01,17,06,00);
+ $scope.plans = [
+   {"num_hzm" : data[0].num_hzm,
+     "time" :data[0].timestamp_hit.getHours() +":" +data[0].timestamp_hit.getMinutes() + "0",
+    "sapak" : data[0].sapak}
+ ,{"num_hzm" : data[1].num_hzm,
+     "time" :data[1].timestamp_hit.getHours() +":" +data[1].timestamp_hit.getMinutes() + "0",
+    "sapak" :data[1].sapak}
+ ,{"num_hzm" : data[2].num_hzm,
+     "time" :data[2].timestamp_hit.getHours() +":" +data[2].timestamp_hit.getMinutes() + "0",
+    "sapak" : data[2].sapak}];
+ 
 
 })
 

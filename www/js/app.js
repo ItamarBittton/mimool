@@ -49,6 +49,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ui.rCalendar'])
       }
     }
   })
+      .state('app.point', {
+    url: '/point',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/points.html',
+        controller: 'AppCtrl'
+      }
+    }
+  })
       .state('app.plan', {
     url: '/plan',
     views: {

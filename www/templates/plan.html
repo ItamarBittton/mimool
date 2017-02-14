@@ -3,8 +3,8 @@
    
     <ion-list>
 <label class="item item-input">
-  <span class="input-label" value="2017-02-17" >תאריך</span>
-  <input type="date">
+  <span class="input-label" >תאריך</span>
+  <input type="date" ng-model="datepaln">
 </label>
 
 <br>
@@ -13,8 +13,10 @@
           <div class="col">שעת התייצבות</div>
           <div class="col">ספק</div>
         </div>
-        <div class="row" ng-repeat="data in ctrl.data">
-
+        <div class="row" ng-repeat="data in plans">
+        <div class="col">{{data.num_hzm}}</div>
+        <div class="col">{{data.time}}</div>
+        <div class="col">{{data.sapak}}</div>
         </div>
       <!--<ion-item ng-repeat="order in orders" href="#/app/orders/{{order.id}}">
         {{order.title}}
