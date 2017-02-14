@@ -94,7 +94,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ui.rCalendar'])
         }
       }
     })
-<<<<<<< HEAD
+
     .state('app.log_in', {
       url: '/Login',
       views: {
@@ -104,7 +104,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ui.rCalendar'])
         }
       }
     })
-=======
 
         .state('app.log_in', {
       url: '/Login',
@@ -115,8 +114,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ui.rCalendar'])
         }
       }
     })
-
->>>>>>> 145fb285da98080130eaf18b07d22eb05d59d314
   .state('app.single', {
     url: '/playlists/:playlistId',
     views: {
