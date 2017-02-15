@@ -1,0 +1,24 @@
+<ion-view view-title="דירוג">
+  <ion-content>
+      <div class="list">
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">:דרג את הנהג עבור</span>
+  </label>
+  <label class="item item-input item-stacked-label">
+    <input ng-model="info.hzm" type="text" placeholder="הקלד מספר אסמכתא">
+  </label>
+  <label class="item item-input item-stacked-label">
+    <input ng-model="info.tm" type="text" placeholder="הקלד מספר תעודת משולח">
+  </label>
+  <label class="item" >
+  
+  <button ng-click="clicked()" class="button button-block button-positive">{{str}}</button>
+  
+</label>
+</div>
+<div ng-if="show">
+    <ionic-ratings ratingsobj='ratingsObject' index='0'></ionic-ratings>
+    </div>
+    <h2 style="text-align: center;">{{text}}</h2>
+  </ion-content>
+</ion-view>

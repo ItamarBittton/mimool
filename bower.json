@@ -20,6 +20,10 @@
     "tests"
   ],
   "dependencies": {
+<<<<<<< HEAD
     "ionic-datepicker": "^1.2.1"
+=======
+    "ionic-ratings": "^0.3.0"
+>>>>>>> 635c47dcafd49b2416d7dde41cbaf90c3b0b81b1
   }
 }

@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'ui.rCalendar'])
+angular.module('starter', ['ionic', 'starter.controllers', 'ui.rCalendar', 'ionic-ratings'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -32,6 +32,26 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ui.rCalendar'])
     controller: 'AppCtrl'
   })
 
+<<<<<<< HEAD
+=======
+  .state('app.plan', {
+    url: '/plan',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/plan.html'
+      }
+    }
+  })
+  .state('app.rate', {
+    url: '/rate',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/rate.html',
+        controller: 'RateCtrl'
+      }
+    }
+  })
+>>>>>>> 635c47dcafd49b2416d7dde41cbaf90c3b0b81b1
   .state('app.search', {
     url: '/search',
     views: {
@@ -92,6 +112,22 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ui.rCalendar'])
       views: {
         'menuContent': {
           templateUrl: 'templates/browse.html'
+        }
+      }
+    })
+    .state('app.alarm', {
+      url: '/alarm',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/alarm.html'
+        }
+      }
+    })
+    .state('app.score', {
+      url: '/score',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/score.html'
         }
       }
     })
