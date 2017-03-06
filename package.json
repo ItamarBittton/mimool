@@ -29,10 +29,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://lidork8@bitbucket.org/shirasonigo/mimool.git"
+    "url": "git+https://github.com/ItamarBittton/mimoolClient.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/shirasonigo/mimool#readme"
+  "homepage": "https://github.com/ItamarBittton/mimoolClient"
 }
